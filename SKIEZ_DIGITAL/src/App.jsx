@@ -1,22 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ServicePage from './ServicePage.jsx';
 import './App.css';
 
-function App() {
+function HomePage() {
   return (
-    <div className="App">
-      {/* Header */}
-      <header className="header">
-        <div className="logo">YourLogo</div>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-      </header>
-
+    <>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-text">
@@ -40,10 +29,10 @@ function App() {
         <h2>Our Services</h2>
         <div className="service-cards">
           <div className="card">SEO</div>
-          <div className="card">Social Media Marketing</div>git
+          <div className="card">Social Media Marketing</div>
           <div className="card">Content Creation</div>
         </div>
-        <button>View All</button>
+        <Link to="/services"><button>View All</button></Link>
       </section>
 
       {/* Promo Section */}
@@ -80,13 +69,39 @@ function App() {
           ></iframe>
         </div>
       </section>
+    </>
+  );
+}
 
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2025 Your Company. All rights reserved.</p>
-        <div className="social-icons">[FB] [TW] [IG]</div>
-      </footer>
-    </div>
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        {/* Header */}
+        <header className="header">
+          <div className="logo">YourLogo</div>
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="#about">About</Link></li>
+              <li><Link to="#contact">Contact</Link></li>
+            </ul>
+          </nav>
+        </header>
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicePage />} />
+        </Routes>
+
+        {/* Footer */}
+        <footer className="footer">
+          <p>© 2025 Your Company. All rights reserved.</p>
+          <div className="social-icons">[FB] [TW] [IG]</div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
