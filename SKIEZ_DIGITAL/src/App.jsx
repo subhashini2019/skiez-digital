@@ -1,11 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import ServicePage from './ServicePage.jsx';
-
 import './App.css';
 
 function HomePage() {
@@ -28,13 +25,18 @@ function HomePage() {
             <img src="/kingston.png" alt="Kingston" />
           </div>
           <div className="about-text">
-          <h2>Skiez Digital World</h2>
-<p>
-Welcome to Skiez Digital, a leading force in the digital marketing world since 2013.We provide exceptional services in SEO, SMM, Email Marketing, Google Ads, Web Design, and B2B solutions that streamline operations and increase efficiency to help businesses achieve their goals. With a team of skilled and dedicated professionals, we are committed to excellence. We are proud to say that Skiez Digital consistently exceeds clients’ expectations.
-            </p>
-            We leverage the latest technologies to create custom solutions that help our clients stay ahead. Additionally, our SEO consulting services optimize technological infrastructure and enhance overall operational efficiency.
+            <h2>Skiez Digital World</h2>
             <p>
-
+              Welcome to Skiez Digital, a leading force in the digital marketing world since 2013. We provide
+              exceptional services in SEO, SMM, Email Marketing, Google Ads, Web Design, and B2B solutions that
+              streamline operations and increase efficiency to help businesses achieve their goals. With a team of
+              skilled and dedicated professionals, we are committed to excellence. We are proud to say that Skiez
+              Digital consistently exceeds clients’ expectations.
+            </p>
+            <p>
+              We leverage the latest technologies to create custom solutions that help our clients stay ahead.
+              Additionally, our SEO consulting services optimize technological infrastructure and enhance overall
+              operational efficiency.
             </p>
             <button>Learn More</button>
           </div>
@@ -92,4 +94,55 @@ Welcome to Skiez Digital, a leading force in the digital marketing world since 2
   );
 }
 
-export default HomePage;
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        {/* Header */}
+        <header className="header">
+          <div className="logo">
+            <img src="/skiez digital logo.jpg" alt="Logo" />
+          </div>
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><button className="join-btn">Join Us</button></li>
+            </ul>
+          </nav>
+        </header>
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicePage />} />
+        </Routes>
+
+        {/* Footer */}
+        <footer className="service-footer">
+          <div className="footer-content">
+            <p>© 2025 Your Digital Agency. All rights reserved.</p>
+            <div className="social-icons">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
