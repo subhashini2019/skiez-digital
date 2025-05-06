@@ -1,6 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
 import ServicePage from './ServicePage.jsx';
+
 import './App.css';
 
 function HomePage() {
@@ -96,10 +100,28 @@ function App() {
         </Routes>
 
         {/* Footer */}
-        <footer className="footer">
-          <p>© 2025 Your Company. All rights reserved.</p>
-          <div className="social-icons">[FB] [TW] [IG]</div>
-        </footer>
+        <footer className="service-footer bg-gray-900 text-white py-8 px-4 md:px-20">
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <p className="text-sm text-gray-400">
+          © 2025 Your Digital Agency. All rights reserved.
+        </p>
+
+        <div className="mt-4 md:mt-0 flex space-x-4">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+            <FontAwesomeIcon icon={faFacebookF} />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+        </div>
+      </div>
+    </footer>
       </div>
     </Router>
   );
