@@ -8,7 +8,7 @@
   }
   
   .service-header {
-    background-color: #007bff; /* Example header background color */
+    background-color: #0b0c0d; /* Example header background color */
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -158,3 +158,102 @@
   }
   
   /* You can add more specific styles to match the image precisely */
+
+
+.contact-section-grid {
+  background-color: #d4edda; /* Light green background color */
+  color: #333;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Adjust column widths as needed */
+  gap: 20px; /* Adjust gap between grid items */
+  align-items: center; /* Vertically align items in the grid */
+ }
+ 
+ 
+ .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+ }
+ 
+ 
+ .phone-numbers,
+ .email {
+  margin-bottom: 10px;
+ }
+ 
+ 
+ .phone-icon,
+ .email-icon {
+  font-size: 1em;
+  margin-right: 5px;
+ }
+ 
+ 
+ .profile-icons {
+  display: flex;
+  margin-top: 10px;
+ }
+ 
+ 
+ .profile-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0; /* Light grey circle */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  font-weight: bold;
+ }
+ 
+ 
+ .consultation-text {
+  text-align: center;
+ }
+ 
+ 
+ .call-now-button {
+  text-align: right; /* Align button to the right */
+ }
+ 
+ 
+ .call-now-button button {
+  background-color: #6c757d; /* Grey button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+ }
+ 
+ 
+ .call-now-button button:hover {
+  background-color: #5a6268;
+ }
+ 
+ 
+ /* Responsive adjustments if needed */
+ @media (max-width: 768px) {
+  .contact-section-grid {
+  grid-template-columns: 1fr; /* Stack items on smaller screens */
+  text-align: center;
+  }
+ 
+ 
+  .contact-info {
+  align-items: center;
+  margin-bottom: 15px;
+  }
+ 
+ 
+  .call-now-button {
+  text-align: center;
+  }
+ }
+
