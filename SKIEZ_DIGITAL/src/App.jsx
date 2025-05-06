@@ -1,9 +1,9 @@
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import ServicePage from './ServicePage.jsx';
 
 import './App.css';
@@ -11,120 +11,85 @@ import './App.css';
 function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-text">
-          <h1>Affordable Digital Marketing Services</h1>
-          <p>Grow your business with expert digital solutions.</p>
-          <button>Get Started</button>
+      {/* Promo Banner Section */}
+      <section className="promo-banner">
+        <div className="promo-left">
+          <img src="/subha.png" alt="Promo" />
         </div>
-        <img src="your-hero-image.jpg" alt="Hero" />
+        <div className="promo-right">
+          {/* Add promotional content here */}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="about" id="about">
+        <div className="about-content">
+          <div className="about-image">
+            <img src="/kingston.png" alt="Kingston" />
+          </div>
+          <div className="about-text">
+          <h2>Skiez Digital World</h2>
+<p>
+Welcome to Skiez Digital, a leading force in the digital marketing world since 2013.We provide exceptional services in SEO, SMM, Email Marketing, Google Ads, Web Design, and B2B solutions that streamline operations and increase efficiency to help businesses achieve their goals. With a team of skilled and dedicated professionals, we are committed to excellence. We are proud to say that Skiez Digital consistently exceeds clients’ expectations.
+            </p>
+            We leverage the latest technologies to create custom solutions that help our clients stay ahead. Additionally, our SEO consulting services optimize technological infrastructure and enhance overall operational efficiency.
+            <p>
+
+            </p>
+            <button>Learn More</button>
+          </div>
+        </div>
       </section>
 
       {/* Stats Section */}
-      <section className="stats">
-        <div>50+ Satisfied Clients</div>
-        <div>50+ Campaigns</div>
-        <div>50+ Awards</div>
+      <section className="stats-section">
+        <div className="stat">
+          <span role="img" aria-label="clients">🌟</span>
+          <h2>30+</h2>
+          <p>Satisfied Clients</p>
+        </div>
+        <div className="stat">
+          <span role="img" aria-label="projects">🎯</span>
+          <h2>25+</h2>
+          <p>Projects Completed</p>
+        </div>
+        <div className="stat">
+          <span role="img" aria-label="team">👥</span>
+          <h2>20+</h2>
+          <p>Team Members</p>
+        </div>
+        <div className="stat">
+          <span role="img" aria-label="awards">🏆</span>
+          <h2>5+</h2>
+          <p>Awards Won</p>
+        </div>
       </section>
 
       {/* Services Section */}
+      <h2 className="services-heading">Our Services</h2>
       <section className="services">
-        <h2>Our Services</h2>
-        <div className="service-cards">
-          <div className="card">SEO</div>
-          <div className="card">Social Media Marketing</div>
-          <div className="card">Content Creation</div>
+        <div className="service-card">
+          <img src="https://via.placeholder.com/300x200" alt="Social Media Marketing" />
+          <h3>Social Media Marketing</h3>
+          <p>Promoting products or services through platforms like Facebook, Instagram, LinkedIn, and Twitter.</p>
         </div>
-        <Link to="/services"><button>View All</button></Link>
+        <div className="service-card">
+          <img src="https://via.placeholder.com/300x200" alt="Google Ads" />
+          <h3>Google Ads</h3>
+          <p>Running paid ads on platforms like Google Ads or social media.</p>
+        </div>
+        <div className="service-card">
+          <img src="https://via.placeholder.com/300x200" alt="SEO" />
+          <h3>SEO</h3>
+          <p>Key elements like website optimization, keywords, and growth analytics.</p>
+        </div>
       </section>
 
-      {/* Promo Section */}
-      <section className="promo">
-        <h3>Take Your Business to the Next Level</h3>
-        <p>Let us handle your digital marketing needs.</p>
-        <button>Contact Us</button>
-      </section>
-
-      {/* Contact Section */}
-      <section className="contact">
-        <h2>Contact Us</h2>
-        <div className="contact-details">
-          <div>
-            <p>Email: info@example.com</p>
-            <p>Phone: +1 234 567 890</p>
-          </div>
-          <form>
-            <input type="text" placeholder="Your Name" />
-            <input type="email" placeholder="Your Email" />
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-        <div className="map">
-          <iframe
-            title="Google Map"
-            src="https://www.google.com/maps/embed?...your_location..."
-            width="100%"
-            height="300"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+      <div className="button-container">
+        <button className="view-more-button">View More</button>
+      </div>
     </>
   );
 }
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        {/* Header */}
-        <header className="header">
-          <div className="logo">YourLogo</div>
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="#about">About</Link></li>
-              <li><Link to="#contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </header>
-
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicePage />} />
-        </Routes>
-
-        {/* Footer */}
-        <footer className="service-footer bg-gray-900 text-white py-8 px-4 md:px-20">
-      <div className="flex flex-col md:flex-row justify-between items-center">
-        <p className="text-sm text-gray-400">
-          © 2025 Your Digital Agency. All rights reserved.
-        </p>
-
-        <div className="mt-4 md:mt-0 flex space-x-4">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-            <FontAwesomeIcon icon={faFacebookF} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
-        </div>
-      </div>
-    </footer>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
+export default HomePage;
