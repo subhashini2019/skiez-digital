@@ -2,20 +2,20 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
 import ServicePage from './ServicePage.jsx';
+import AboutUs from './AboutUs.jsx';
 import './App.css';
 
 function HomePage() {
   return (
     <>
-      {/* Promo Banner Section */}
+      {/* Promo Banner */}
       <section className="promo-banner">
         <div className="promo-left">
           <img src="/subha.png" alt="Promo" />
         </div>
-        <div className="promo-right">
-          {/* Add promotional content here */}
-        </div>
+        <div className="promo-right">{/* Add promotional content here */}</div>
       </section>
 
       {/* About Section */}
@@ -27,11 +27,9 @@ function HomePage() {
           <div className="about-text">
             <h2>Skiez Digital World</h2>
             <p>
-              Welcome to Skiez Digital, a leading force in the digital marketing world since 2013. We provide
-              exceptional services in SEO, SMM, Email Marketing, Google Ads, Web Design, and B2B solutions that
-              streamline operations and increase efficiency to help businesses achieve their goals. With a team of
-              skilled and dedicated professionals, we are committed to excellence. We are proud to say that Skiez
-              Digital consistently exceeds clients’ expectations.
+              Welcome to Skiez Digital, a leading force in the digital marketing world since 2013.
+              We provide exceptional services in SEO, SMM, Email Marketing, Google Ads, Web Design, and
+              B2B solutions that streamline operations and increase efficiency to help businesses achieve their goals.
             </p>
             <p>
               We leverage the latest technologies to create custom solutions that help our clients stay ahead.
@@ -107,7 +105,8 @@ function App() {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><a href="#about">About</a></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/Blog">Blog</Link></li>
               <li><a href="#contact">Contact</a></li>
               <li><button className="join-btn">Join Us</button></li>
             </ul>
@@ -118,28 +117,49 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicePage />} />
+          <Route path="/about" element={<AboutUs />} />
+
         </Routes>
 
         {/* Footer */}
-        <footer className="service-footer">
-          <div className="footer-content">
-            <p>© 2025 Your Digital Agency. All rights reserved.</p>
-            <div className="social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </a>
-            </div>
+        <footer className="footer">
+          <div className="footer-section logo-section">
+            <div className="logo">SKIEZ <span>DIGITAL</span></div>
+            <p>
+              Welcome to Skiez Digital Marketing Agency. Since 2013, we’ve provided exceptional services in
+              SEO, SMM, Email Marketing, Google Ads, Web Design, and B2B solutions to streamline operations
+              and boost business growth.
+            </p>
+          </div>
+
+          <div className="footer-section quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-section contact-info">
+            <h4>Get In Touch</h4>
+            <p>📞 +91 8220043041</p>
+            <p>📞 +91 9994401291</p>
+            <p>✉️ hr@skiezdigital.com</p>
+            <p>🌐 www.skiezdigital.com</p>
+            <p>📍 81/5, 6th Street, Near Amma Park, Shanthi Nagar, Chengalpattu 603003</p>
           </div>
         </footer>
+
+        {/* Copyright */}
+        <div className="copyright">
+          <p>
+            © 2025 Skiez Digital Innovations Pvt Ltd. All Rights Reserved. Designed by 
+            <a href="https://www.skiezdigital.com" target="_blank" rel="noopener noreferrer"> Skiez Digital</a>
+          </p>
+        </div>
       </div>
     </Router>
   );
