@@ -1,45 +1,53 @@
 import React from 'react';
-import './AboutUs.css';
+import './Blog.css';
 
-function AboutUs() {
+const Blog = () => {
   return (
-    <div className="about-us">
-      {/* Promo Banner */}
-      <section className="promo-banner">
-        <div className="promo-left">
-          <img src="/jabin.png" alt="Promo" />
+    <div className="blog-container">
+     
+      <section className="blog-hero">
+        <div className="blog-hero-overlay">
+          <h1>Next Level <span>Digital Marketing</span></h1>
+          <p>With our innovative strategies and cutting-edge techniques, we will boost your sales!</p>
+          <button className="blog-button">BLOGS</button>
         </div>
-        <div className="promo-right">{/* Add promotional content here */}</div>
       </section>
 
-      {/* About Section */}
-      <section className="about" id="about">
-        <div className="about-content">
-          <div className="about-image">
-            <img src="/about.png" alt="Kingston" />
+      {/* Blog Highlight Card */}
+      <section className="blog-highlight">
+        <div className="blog-card">
+          <div className="blog-text">
+            <h2>
+              THE REASONS YOUR COMPANY ISN'T APPEARING ON GOOGLE
+              <br />
+              (AND HOW TO FIX IT)
+            </h2>
+            <button className="join-us-button">JOIN US</button>
           </div>
-          <div className="about-text">
-            <h2>Skiez Digital: Elevating Brands with Data-Driven 
-            Digital Marketing</h2>
-            <p>
-            At Skiez Digital, we are passionate about helping businesses thrive in the Digital 
-World. As a leading Digital Marketing Agency, we specialize in crafting data-driven 
-strategies that enhance Online Visibility, Drive Targeted Traffic, and maximize 
-conversions
-            </p>
-            <p>
-            With a team of Experienced, Dedicated Staffs, Marketers, Creative Designers, and 
-Tech-savvy strategists, we offer a comprehensive range of Services, including SEO, 
-Social Media Marketing, Content Creation, PPC advertising, and E-mail Campaigns. 
-Our goal is to deliver Personalized, Innovative solutions that align with your Brand’s 
-Unique Objectives and Ensure Measurable Growth.
-            </p>
-            <button>Learn More</button>
+          <div className="blog-image">
+            <img src="/Blog_bg.png" alt="Girl with headphones" />
           </div>
+        </div>
+      </section>
+
+      {/* Blog Target and Overview */}
+      <section className="blog-info">
+        <p className="target-audience">
+          <strong>Target Audience:</strong> Small business owners who are <span className="highlight-blue">annoyed</span> that their company <span className="highlight-blue">isn't showing up on maps or Google searches</span>.
+        </p>
+        <div className="overview-section">
+          <h3>➤ Overview</h3>
+          <p>
+            “Have you Googled your business and found... nothing?” is a relatable way to start.
+            <br /><br />
+            Give a relatable example of the significance of being visible on Google.
+            <br /><br />
+            Give a sneak peek of the fixes you’ll teach in this post.
+          </p>
         </div>
       </section>
     </div>
   );
-}
+};
 
-export default AboutUs;
+export default Blog;

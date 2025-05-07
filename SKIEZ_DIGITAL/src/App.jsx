@@ -5,6 +5,7 @@ import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/
 
 import ServicePage from './ServicePage.jsx';
 import AboutUs from './AboutUs.jsx';
+import Blog from './Blog.jsx';
 import './App.css';
 
 function HomePage() {
@@ -118,6 +119,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/Blog" element={<Blog />} />
 
         </Routes>
 
@@ -138,7 +140,7 @@ function App() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><a href="#blog">Blog</a></li>
+              <li><a href="/blog">Blog</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
