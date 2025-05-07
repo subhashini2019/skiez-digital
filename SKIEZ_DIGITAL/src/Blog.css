@@ -7,46 +7,20 @@
 
 /* Hero Banner */
 .blog-hero {
-  background: url('/blog_bg.png') no-repeat center center;
-  background-size: cover;
-  height: 85vh;
+  background: url('/blog_bg.png');
+  background-size: contain;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
   position: relative;
+  width: 247vh;
+
 }
 
-.blog-hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 12px;
-}
 
-.blog-hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
 
-.blog-hero-overlay h1 span {
-  color: #00cfff;
-}
-
-.blog-hero-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.blog-button {
-  background-color: #ff4a6e;
-  color: white;
-  padding: 10px 20px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
 
 /* Blog Highlight Card */
 .blog-highlight {
@@ -58,7 +32,6 @@
 
 .blog-card {
   background: #fefefe;
-  border: 4px solid #fcd343;
   border-radius: 10px;
   display: flex;
   max-width: 900px;
@@ -90,8 +63,10 @@
 }
 
 .blog-image img {
-  max-width: 200px;
-  border-radius: 10px;
+  max-width: 146%;
+  border-radius: -9px;
+  padding: 130px;
+  margin: -175px;
 }
 
 /* Info Section */

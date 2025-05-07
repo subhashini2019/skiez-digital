@@ -7,16 +7,17 @@ import ServicePage from './ServicePage.jsx';
 import AboutUs from './AboutUs.jsx';
 import Blog from './Blog.jsx';
 import './App.css';
+import Contact from './Contact.jsx';
+
 
 function HomePage() {
   return (
     <>
-      {/* Promo Banner */}
-      <section className="promo-banner">
+      {/* Promo Banner Section */}
+      <section className="promo">
         <div className="promo-left">
-          <img src="/subha.png" alt="Promo" />
+          <img src="/subha.png" alt="Promo"/>
         </div>
-        <div className="promo-right">{/* Add promotional content here */}</div>
       </section>
 
       {/* About Section */}
@@ -26,23 +27,26 @@ function HomePage() {
             <img src="/kingston.png" alt="Kingston" />
           </div>
           <div className="about-text">
-            <h2>Skiez Digital World</h2>
-            <p>
-              Welcome to Skiez Digital, a leading force in the digital marketing world since 2013.
-              We provide exceptional services in SEO, SMM, Email Marketing, Google Ads, Web Design, and
-              B2B solutions that streamline operations and increase efficiency to help businesses achieve their goals.
+            <h2 className="about-hd">Skiez Digital World</h2>
+            <p className='about-para'>
+              Welcome to Skiez Digital, a leading force in the digital marketing world since 2013. We provide
+              exceptional services in SEO, SMM, Email Marketing, Google Ads, Web Design, and B2B solutions that
+              streamline operations and increase efficiency to help businesses achieve their goals. With a team of
+              skilled and dedicated professionals, we are committed to excellence. We are proud to say that Skiez
+              Digital consistently exceeds clients’ expectations.
             </p>
-            <p>
+            <p className='about-para'>
               We leverage the latest technologies to create custom solutions that help our clients stay ahead.
               Additionally, our SEO consulting services optimize technological infrastructure and enhance overall
               operational efficiency.
             </p>
-            <button>Learn More</button>
+            <button className='about-learn-btn'>Learn More</button>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
+      <div class="stats-container d-flex justify-content-center align-items-center">
       <section className="stats-section">
         <div className="stat">
           <span role="img" aria-label="clients">🌟</span>
@@ -64,28 +68,29 @@ function HomePage() {
           <h2>5+</h2>
           <p>Awards Won</p>
         </div>
-      </section>
+        </section>
+      </div>
 
       {/* Services Section */}
+      <div className='service-container'>
       <h2 className="services-heading">Our Services</h2>
       <section className="services">
         <div className="service-card">
-          <img src="https://via.placeholder.com/300x200" alt="Social Media Marketing" />
-          <h3>Social Media Marketing</h3>
-          <p>Promoting products or services through platforms like Facebook, Instagram, LinkedIn, and Twitter.</p>
+          <img src="social.jpg" alt="Social Media Marketing" />
+          <h3 className='card-hd'>Social Media Marketing</h3>
+          <p className='card-para'>Promoting products or services through platforms like Facebook, Instagram, LinkedIn, and Twitter.</p>
         </div>
         <div className="service-card">
-          <img src="https://via.placeholder.com/300x200" alt="Google Ads" />
-          <h3>Google Ads</h3>
-          <p>Running paid ads on platforms like Google Ads or social media.</p>
+        <img src="googleads.jpg" alt="Google Ads" />
+          <p className='card-para'>Running paid ads on platforms like Google Ads or social media.</p>
         </div>
         <div className="service-card">
-          <img src="https://via.placeholder.com/300x200" alt="SEO" />
-          <h3>SEO</h3>
-          <p>Key elements like website optimization, keywords, and growth analytics.</p>
+          <img src="seo.png" alt="SEO" />
+          <h3 className='card-hd'>SEO</h3>
+          <p className='card-para'>Key elements like website optimization, keywords, and growth analytics.</p>
         </div>
       </section>
-
+      </div>   
       <div className="button-container">
         <button className="view-more-button">View More</button>
       </div>
@@ -106,9 +111,9 @@ function App() {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/Blog">Blog</Link></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/AboutUs">About</a></li>
+              <li><a href="/Blog">Blog</a></li>
+              <li><a href="/Contact">Contact</a></li>
               <li><button className="join-btn">Join Us</button></li>
             </ul>
           </nav>
@@ -118,11 +123,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicePage />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Blog" element={<Blog />} />
-
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
-
+    
         {/* Footer */}
         <footer className="footer">
           <div className="footer-section logo-section">
@@ -138,10 +143,10 @@ function App() {
             <h4>Quick Links</h4>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
+              <li><Link to="/AboutUs">About</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/Blog">Blog</a></li>
+              <li><a href="/Contact">Contact</a></li>
             </ul>
           </div>
 
