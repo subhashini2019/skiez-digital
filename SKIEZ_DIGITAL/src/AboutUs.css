@@ -10,6 +10,14 @@ body, html {
   overflow-x: hidden;
 }
 
+.about-hd-page {
+  color: #0f5c64;
+}
+
+.about-btn{
+  background: linear-gradient(to right, grey, #66E4F7);
+}
+
 .header {
   background-color: #000;
   display: flex;
@@ -37,9 +45,7 @@ body, html {
   transition: 0.3s;
 }
 
-.header nav ul .active {
-  border-bottom: 2px solid #57d9ff;
-}
+
 
 .book-btn {
   background: linear-gradient(to right, #57d9ff, #89e3d1);
@@ -77,25 +83,6 @@ body, html {
   flex-wrap: wrap;
 }
 
-.content-section .left img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-.content-section .right {
-  flex: 1;
-}
-
-.call-us {
-  margin-top: 1rem;
-  background-color: #57d9ff;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
 .footer {
   background-color: #111;
@@ -177,13 +164,12 @@ body, html {
     text-align: center;
   }
 
-  .promo-left,
-  .promo-right {
-    width: 100%;
+  .promo-left {
+  
+    max-width: 100%;
+    height: 50%;
+    background-size: contain;
   }
 
-  .promo-left img {
-    width: 100%;
-    height: auto;
-  }
+
 }

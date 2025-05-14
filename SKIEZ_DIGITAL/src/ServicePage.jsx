@@ -4,28 +4,32 @@ import React from 'react';
 
  function ContactSection() {
     return (
-    <div className="contact-section-grid">
-    <div className="contact-info">
-    <h3>Know Our Services, Call Us Now</h3>
-    <div className="phone-numbers">
-    <div className="phone">
-    <span className="phone-icon">📞</span> +91 8220 XXX XXX
+      <div className="contact-section">
+      <div className="contact-info">
+        <img src="/phone_icon.png" alt="Phone" />
+        <div className='phone-section'>
+        <h4 className='phone-heading'>Know Our Services In Detail</h4>
+        <p className="phone-number">+91 82208 8041</p>
+        <p className="phone-number">+91 99944 01291</p>
+      </div>
+      </div>
+    
+      <div className="vertical-line"></div>
+    
+      <div className="contact-text">
+        <p className='ser-para'>
+          Our experts are here to guide you with personalized advice.
+          Book your free consultation today and take the first step toward smarter decisions!
+        </p>
+      </div>
+    
+      <div className="vertical-line"></div>
+    
+      <div className="call-button">
+        <button className='ser-btn'>Call Now</button>
+      </div>
     </div>
-    <div className="phone">
-    <span className="phone-icon">📞</span> +91 99944 01291
-    </div>
-    </div>
-    <div className="email">
-    <span className="email-icon">📧</span> example@email.com
-    </div>
-    </div>
-    <div className="consultation-text">
-    <p>Our experts are here to guide you with personalized advice. Book your free consultation today and take the first step toward smarter decisions!</p>
-    </div>
-    <div className="call-now-button">
-    <button>Call Now</button>
-    </div>
-    </div>
+    
     );
    }
 
@@ -59,13 +63,15 @@ import React from 'react';
         <p>
           Unlock your Brand's full Potential with tailored strategies in Digital Marketing, SEO, PPC, Google Ads, Social Media Marketing, and Lead Generation. We provide end-to-end solutions that Drive Growth, Enhance Visibility, and Deliver Measurable Results.
         </p>
-      </section>
+      
+
+       </section>
 
       <section className="service-categories">
         {[
           {
-            img: "/socialmedia.jpg",
-            title: "SOCIAL MEDIA MARKETING",
+            img: "/smm.jpg",
+            title: "Social Media Marketing",
             desc: "Growing is more important than merely posting. Socialize your brand’s story, amplify your calls-to-action, convert followers, and enhance your social media presence."
           },
           {
@@ -74,15 +80,16 @@ import React from 'react';
             desc: "Email is powerful and it isn’t going away. We create mobile-first designs, build your lists, automate trust, and personalize with segmentation."
           },
           {
+            img: "/seoo.png",
+            title: "Search Engine Optimization",
+            desc: "Improve your visibility on search engines and attract organic traffic to your website through proven SEO strategies."
+          },
+          {
             img: "/google_ads.jpg",
             title: "Google Ads",
             desc: "Want to grow more quickly? Google Ads helps you reach your audience with smart campaigns, great ad copy, and optimized keyword targeting."
           },
-          {
-            img: "/seo.png",
-            title: "Search Engine Optimization",
-            desc: "Improve your visibility on search engines and attract organic traffic to your website through proven SEO strategies."
-          },
+          
           {
             img: "/app_development.jpg",
             title: "App Development",
@@ -90,16 +97,26 @@ import React from 'react';
           },
           {
             img: "/website_design.jpg",
-            title: "Website Design",
+            title: "Website Development",
             desc: "Your website is your digital storefront. We design modern, responsive, and user-friendly websites that convert."
+          },
+          {
+            img: "/uiux.jpg",
+            title: "UI\UX Design",
+            desc: "We design clean and user-friendly interfaces that make websites and apps easy to navigate. We ensure users have a smooth, enjoyable experience that keeps them coming back."
+          },
+          {
+            img: "/graphic.jpg",
+            title: "Graphic Design",
+            desc: "At SKIEZ DIGITAL, we create eye-catching designs that make your brand stand out. Our graphics are made to grab attention and help grow your business"
           }
         ].map((card, i) => (
-          <div className="service-card" key={i}>
+          <div className="service-card-ser" key={i}>
             <div className="card-header">
               <img src={card.img} alt={card.title} />
-              <h3>{card.title}</h3>
             </div>
             <div className="card-body">
+            <h3>{card.title}</h3>
               <p>{card.desc}</p>
             </div>
           </div>

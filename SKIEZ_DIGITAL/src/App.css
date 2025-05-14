@@ -261,11 +261,13 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   display: flex;
+  border: 1px solid #37afbf;
+  border-style: solid;
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
   flex-wrap: wrap;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
@@ -328,6 +330,15 @@ body {
 
 .service-footer .space-x-4 a:hover {
   color: #66E4F7;
+  margin-bottom: 0px;
+}
+
+.footer-section img {
+  border-radius: 60%;
+  height: 60px;
+  width: auto;
+  object-fit: cover;
+
 }
 
 /* Responsive */
@@ -375,4 +386,5 @@ body {
     width: 100%;
     height: auto;
   }
+
 }
